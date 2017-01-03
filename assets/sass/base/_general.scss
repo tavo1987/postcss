@@ -1,0 +1,41 @@
+*{
+    lost-util:edit;
+}
+
+$base-color : #f7f7f7;
+
+body{
+    background:$base-color;
+    font-family: sans-serif;
+    color: #333;
+    margin:0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    margin-top: 1rem;
+    max-width: 600px;
+    margin: auto;
+    lost-center: 1200px;
+    lost-flex-container: row;
+    background: skyblue;
+    
+
+    &__item{
+        background-color:olive;
+        lost-column: 1/1;
+        min-height: 200px;
+        //lost-column-rounder: 100;
+
+        @media screen and (min-width: 768px){   
+            lost-column: 1/12;
+            &:nth-child(2){
+                lost-column: 11/12;
+            }
+        }
+    }
+}
